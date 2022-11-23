@@ -44,7 +44,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "Choose a license",
-    choices: ["MIT", "ISC", "GNUPLv3"],
+    choices: ["MIT", "ISC", "GNUGPLv3", "IBM", "SIL"],
   },
 ];
 
@@ -55,7 +55,7 @@ function init() {
     .then((data) => {
       const generate = generateMarkdown(data);
       //function to write readme to folder
-      fs.writeFile("README.MD", generate, function (error) {
+      fs.writeFile("README.md", generate, function (error) {
         if (error) {
           console.log("File could not be saveed", Error);
         } else {
